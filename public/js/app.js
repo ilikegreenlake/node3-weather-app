@@ -6,6 +6,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     messageOne.textContent="Loading ...";
     messageTwo.textContent="";
+
     const location = document.querySelector('input').value;
     const url = "http://localhost:3000/weather?address=" + location;
     fetch(url).then((response)=>{
